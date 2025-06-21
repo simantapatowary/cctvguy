@@ -2,86 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery – CCTV Guy</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Project photos and installations by CCTV Guy. View our work in homes, offices, and commercial spaces in Guwahati.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    .gallery-container {{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1em;
-      padding: 1em;
-    }}
-    .gallery-item {{
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }}
-    .gallery-item img {{
-      width: 100%;
-      height: auto;
-      display: block;
-    }}
-    .gallery-item p {{
-      text-align: center;
-      margin: 0;
-      padding: 0.5em;
-      background: #007BFF;
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .gallery-image {
+      object-fit: cover;
+      height: 200px;
+      border-radius: 8px;
+    }
+    footer {
+      background: #222;
       color: white;
-      font-weight: bold;
-    }}
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    nav a.nav-link {
+      color: white;
+      font-weight: 600;
+    }
+    nav a.nav-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Project Gallery</h1>
-    <div class="gallery-container">
-
-      <div class="gallery-item">
-        <img src="images/cctv.jpg" alt="Cctv">
-        <p>Cctv</p>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">CCTV Guy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        </ul>
       </div>
-    
-      <div class="gallery-item">
-        <img src="images/biometric.jpg" alt="Biometric">
-        <p>Biometric</p>
-      </div>
-    
-      <div class="gallery-item">
-        <img src="images/lan-wifi.jpg" alt="Lan Wifi">
-        <p>Lan Wifi</p>
-      </div>
-    
-      <div class="gallery-item">
-        <img src="images/epbx.jpg" alt="Epbx">
-        <p>Epbx</p>
-      </div>
-    
-      <div class="gallery-item">
-        <img src="images/firealarm.jpg" alt="Firealarm">
-        <p>Firealarm</p>
-      </div>
-    
-      <div class="gallery-item">
-        <img src="images/antivirus.jpg" alt="Antivirus">
-        <p>Antivirus</p>
-      </div>
-    
     </div>
-  </main>
+  </nav>
 
+  <!-- Gallery Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 text-primary">Project Gallery</h2>
+      <div class="row g-4">
+        <!-- Example image card -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm">
+            <img src="images/project1.jpg" alt="Project 1" class="card-img-top gallery-image">
+            <div class="card-body text-center">
+              <p class="card-text">Office Setup – 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copy this block for more images -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm">
+            <img src="images/project2.jpg" alt="Project 2" class="card-img-top gallery-image">
+            <div class="card-body text-center">
+              <p class="card-text">Shop Installation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 CCTV Guy. All Rights Reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 CCTV Guy. All Rights Reserved.</p>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
