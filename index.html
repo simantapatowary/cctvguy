@@ -1,180 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CCTV Guy | Security Solutions</title>
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: Arial, sans-serif;
-      color: white;
-      background: #0f2027;
-      scroll-behavior: smooth;
-    }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: rgba(15, 32, 39, 0.85);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      z-index: 1000;
-    }
-    nav .logo { font-size: 1.4rem; font-weight: bold; color: #00d4ff; }
-    nav ul { list-style: none; display: flex; gap: 20px; }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover { color: #00d4ff; }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-    }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 25px;
-      color: #dcdcdc;
-    }
-    .btn-primary {
-      background: #00d4ff;
-      color: #0f2027;
-      padding: 12px 25px;
-      border: none;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .btn-primary:hover { background: #00a7cc; }
-
-    /* Services Section */
-    #services {
-      padding: 80px 20px;
-      background: #16222a;
-      text-align: center;
-    }
-    #services h2 {
-      font-size: 2rem;
-      margin-bottom: 50px;
-      color: #00d4ff;
-    }
-    .service-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .service-card {
-      background: #1e2c35;
-      padding: 30px 20px;
-      border-radius: 10px;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-      background: #243b4a;
-    }
-    .service-card i {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-    .service-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #00d4ff;
-    }
-    .service-card p {
-      font-size: 0.95rem;
-      color: #cccccc;
-    }
-
-    @media (max-width: 768px) {
-      nav ul { display: none; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geekworkx</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">CCTV Guy</div>
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<!-- HEADER -->
+<header>
+    <img src="images/logo.png" alt="Geekworkx" class="logo">
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1 data-aos="fade-up">Securing Your World with CCTV Guy</h1>
-    <p data-aos="fade-up" data-aos-delay="200">
-      Professional CCTV, Networking, and Security Solutions you can trust.  
-      We provide end-to-end service from installation to maintenance.
-    </p>
-    <button class="btn-primary" data-aos="fade-up" data-aos-delay="400">Get a Free Quote</button>
-  </section>
+<!-- HERO -->
+<section id="hero" class="hero">
+    <h1>We Create, Manage & Market Your Brand</h1>
+    <p>Your all-in-one solution for branding, digital marketing, and creative content that connects with your audience.</p>
+    <button>Get Started</button>
+</section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2 data-aos="fade-up">Our Services</h2>
-    <div class="service-container">
-      <div class="service-card" data-aos="zoom-in">
-        <i class="fas fa-video" style="color:#00d4ff;"></i>
-        <h3>CCTV Installation</h3>
-        <p>High-quality CCTV camera setup for homes, offices, and industries with remote monitoring.</p>
-      </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-        <i class="fas fa-network-wired" style="color:#ff9800;"></i>
-        <h3>Networking Solutions</h3>
-        <p>LAN, Wi-Fi, and structured cabling for seamless connectivity across your premises.</p>
-      </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-        <i class="fas fa-door-closed" style="color:#4caf50;"></i>
-        <h3>Access Control</h3>
-        <p>Biometric attendance, EM locks, and secure entry systems to protect your property.</p>
-      </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
-        <i class="fas fa-tools" style="color:#e91e63;"></i>
-        <h3>Maintenance & Support</h3>
-        <p>Regular servicing and on-call support to ensure your security systems run flawlessly.</p>
-      </div>
+<!-- SERVICES -->
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+
+        <!-- Each service: icon + hover image -->
+        <div class="service-card" style="--bg:url('images/webdev.jpg')">
+            <div class="icon"><i class="fas fa-code"></i></div>
+            <h3>Website Development</h3>
+            <p>Modern, responsive, and high-performance websites tailored to your needs.</p>
+        </div>
+
+        <div class="service-card" style="--bg:url('images/socialmedia.jpg')">
+            <div class="icon"><i class="fab fa-instagram"></i></div>
+            <h3>Social Media Management</h3>
+            <p>Build and maintain your brand presence across all social media platforms.</p>
+        </div>
+
+        <div class="service-card" style="--bg:url('images/googlemap.jpg')">
+            <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>Google Maps Optimization</h3>
+            <p>Update, manage, and optimize your location on Google for better visibility.</p>
+        </div>
+
+        <div class="service-card" style="--bg:url('images/reels.jpg')">
+            <div class="icon"><i class="fas fa-video"></i></div>
+            <h3>Reels Shoot & Edit</h3>
+            <p>Short-form videos that grab attention and boost your brand reach.</p>
+        </div>
+
+        <div class="service-card" style="--bg:url('images/photography.jpg')">
+            <div class="icon"><i class="fas fa-camera"></i></div>
+            <h3>Photography</h3>
+            <p>High-quality images for your products, events, and brand storytelling.</p>
+        </div>
+
+        <div class="service-card" style="--bg:url('images/branding.jpg')">
+            <div class="icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Branding & Marketing</h3>
+            <p>Strategies and campaigns that connect you with the right audience.</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- AOS Animation Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000 });
-  </script>
+<!-- ABOUT -->
+<section id="about" class="about">
+    <img src="images/team.jpg" alt="About Geekworkx">
+    <div class="about-text">
+        <h2>About Us</h2>
+        <p>We are a creative agency that blends design, technology, and strategy to help your brand stand out. Our team is passionate about delivering measurable results and lasting impressions.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Google Map -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.3246741479786!2d91.7267841753082!3d26.09782069364456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5b0f08f8ad8d%3A0x6b7f47f8f3b5e5a7!2sLokhra%2C%20Guwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1693667990000!5m2!1sen!2sin"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Geekworkx. All Rights Reserved.</p>
+</footer>
+
+<!-- Inline CSS for hover background -->
+<style>
+    .service-card::before {
+        background-image: var(--bg);
+    }
+</style>
 
 </body>
 </html>
