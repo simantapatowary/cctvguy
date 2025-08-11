@@ -22,24 +22,6 @@
   <meta name="twitter:description" content="Professional CCTV installation, IT networking, and digital media services including social media management, Google Maps optimization, reels shoot & edit, and photography in Guwahati." />
   <meta name="twitter:image" content="https://github.com/simantapatowary/cctvguy/blob/main/images/service-remote.jpg?raw=true" />
 
-  <!-- Structured Data for Local Business -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "CCTV Guy",
-    "telephone": "+919365024703",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Lokhra",
-      "addressLocality": "Guwahati",
-      "postalCode": "781040",
-      "addressCountry": "IN"
-    },
-    "url": "https://www.cctvguy.in"
-  }
-  </script>
-
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   
@@ -106,6 +88,8 @@
       border-radius: 4px;
       cursor: pointer;
       transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
     }
     .btn-primary:hover { background: #00a7cc; }
     #services {
@@ -159,25 +143,6 @@
       font-size: 2rem;
       color: #00d4ff;
       margin-bottom: 50px;
-    }
-    #digital-media .digital-service-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    #digital-media .digital-service-card {
-      background: #243b4a;
-      padding: 30px 20px;
-      border-radius: 10px;
-      color: #ccc;
-    }
-    #digital-media .digital-service-card h3 {
-      margin-bottom: 10px;
-      color: inherit;
-    }
-    #digital-media .digital-service-card i {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
     }
     #about {
       padding: 80px 20px;
@@ -274,11 +239,10 @@
       #about, #services, #contact, #digital-media {
         padding: 50px 15px;
       }
-      .service-container, #digital-media .digital-service-container {
+      .service-container {
         gap: 20px;
       }
     }
-
     /* Accessibility helper style */
     .sr-only { 
       position: absolute; 
@@ -291,6 +255,25 @@
       border: 0; 
     }
   </style>
+  
+  <!-- Structured Data for Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "CCTV Guy",
+    "telephone": "+919365024703",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lokhra",
+      "addressLocality": "Guwahati",
+      "postalCode": "781040",
+      "addressCountry": "IN"
+    },
+    "url": "https://www.cctvguy.in"
+  }
+  </script>
+  
 </head>
 <body>
 
@@ -312,7 +295,7 @@
       Professional CCTV, Networking, and Security Solutions you can trust.  
       We provide end-to-end service from installation to maintenance.
     </p>
-    <button class="btn-primary" data-aos="fade-up" data-aos-delay="400">Get a Free Quote</button>
+    <a href="https://wa.me/919365024703?text=Hello,%20I%20would%20like%20to%20know%20the%20rates%20for%20your%20services." class="btn-primary" data-aos="fade-up" data-aos-delay="400" target="_blank" rel="noopener noreferrer">Get a Free Quote</a>
   </section>
 
   <!-- Services Section -->
@@ -344,24 +327,24 @@
 
   <!-- Digital Media Services Section -->
   <section id="digital-media" data-aos="fade-up">
-    <h2> Our Digital Media Services</h2>
+    <h2>Our Digital Media Services</h2>
     <div class="service-container">
-      <div class="service-card" role="img" aria-label="Social Media Handle Management icon">
+      <div class="service-card" role="img" aria-label="Social Media Handle Management icon" data-aos="zoom-in">
         <i class="fas fa-hashtag" style="color:#00d4ff;"></i>
         <h3>Social Media Handle Management</h3>
         <p>Manage and grow your social media presence across platforms with expert strategies.</p>
       </div>
-      <div class="digital-service-card" role="img" aria-label="Google Maps Location Update & Management icon">
+      <div class="service-card" role="img" aria-label="Google Maps Location Update & Management icon" data-aos="zoom-in" data-aos-delay="100">
         <i class="fas fa-map-marker-alt" style="color:#ff9800;"></i>
         <h3>Google Maps Location Update & Management</h3>
         <p>Keep your business location accurate and optimized on Google Maps to attract more customers.</p>
       </div>
-      <div class="digital-service-card" role="img" aria-label="Reels Shoot & Edit icon">
+      <div class="service-card" role="img" aria-label="Reels Shoot & Edit icon" data-aos="zoom-in" data-aos-delay="200">
         <i class="fas fa-video" style="color:#4caf50;"></i>
         <h3>Reels Shoot & Edit</h3>
         <p>Professional shooting and editing of reels for social media engagement and branding.</p>
       </div>
-      <div class="digital-service-card" role="img" aria-label="Photography icon">
+      <div class="service-card" role="img" aria-label="Photography icon" data-aos="zoom-in" data-aos-delay="300">
         <i class="fas fa-camera" style="color:#e91e63;"></i>
         <h3>Photography</h3>
         <p>High-quality photography services for events, products, and promotional needs.</p>
