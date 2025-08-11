@@ -3,15 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CCTV Guy | Security Solutions</title>
-
+  
+  <title>CCTV Guy | Security Solutions in Guwahati - CCTV Installation & Digital Media Services</title>
+  
+  <meta name="description" content="Professional CCTV installation, networking, access control, and digital media services in Guwahati. Contact CCTV Guy for secure and reliable solutions." />
+  
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   
   <!-- AOS Animation Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  
+  <!-- Structured Data for Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "CCTV Guy",
+    "telephone": "+919365024703",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lokhra",
+      "addressLocality": "Guwahati",
+      "postalCode": "781040",
+      "addressCountry": "IN"
+    },
+    "url": "https://www.cctvguy.in"
+  }
+  </script>
 
   <style>
+    /* Your existing CSS here unchanged */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
@@ -22,8 +44,6 @@
       position: relative;
       padding-bottom: 100px; /* for floating buttons space */
     }
-
-    /* Navigation */
     nav {
       position: fixed;
       width: 100%;
@@ -45,8 +65,6 @@
       transition: color 0.3s;
     }
     nav ul li a:hover { color: #00d4ff; }
-
-    /* Hero Section */
     .hero {
       height: 100vh;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -76,8 +94,6 @@
       transition: background 0.3s;
     }
     .btn-primary:hover { background: #00a7cc; }
-
-    /* Services Section */
     #services {
       padding: 80px 20px;
       background: #16222a;
@@ -118,8 +134,6 @@
       font-size: 0.95rem;
       color: #cccccc;
     }
-
-    /* Digital Media Services Section */
     #digital-media {
       padding: 80px 20px;
       background: #1b2a38;
@@ -151,8 +165,6 @@
       font-size: 2.5rem;
       margin-bottom: 15px;
     }
-
-    /* About Section */
     #about {
       padding: 80px 20px;
       background: #0f2027;
@@ -171,8 +183,6 @@
       color: #dcdcdc;
       margin-bottom: 20px;
     }
-
-    /* Contact Section */
     #contact {
       padding: 80px 20px;
       background: #16222a;
@@ -217,8 +227,6 @@
     button[type="submit"]:hover {
       background: #00a7cc;
     }
-
-    /* Floating Call & WhatsApp Buttons */
     .floating-btn-container {
       position: fixed;
       bottom: 20px;
@@ -247,8 +255,6 @@
       background: #00a7cc;
       color: white;
     }
-
-    /* Responsive */
     @media (max-width: 768px) {
       nav ul { display: none; }
       #about, #services, #contact, #digital-media {
@@ -287,22 +293,22 @@
   <section id="services">
     <h2 data-aos="fade-up">Our IT Services</h2>
     <div class="service-container">
-      <div class="service-card" data-aos="zoom-in">
+      <div class="service-card" data-aos="zoom-in" role="img" aria-label="CCTV Installation icon">
         <i class="fas fa-video" style="color:#00d4ff;"></i>
         <h3>CCTV Installation</h3>
         <p>High-quality CCTV camera setup for homes, offices, and industries with remote monitoring.</p>
       </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100" role="img" aria-label="Networking Solutions icon">
         <i class="fas fa-network-wired" style="color:#ff9800;"></i>
         <h3>Networking Solutions</h3>
         <p>LAN, Wi-Fi, and structured cabling for seamless connectivity across your premises.</p>
       </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200" role="img" aria-label="Access Control icon">
         <i class="fas fa-door-closed" style="color:#4caf50;"></i>
         <h3>Access Control</h3>
         <p>Biometric attendance, EM locks, and secure entry systems to protect your property.</p>
       </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="300" role="img" aria-label="Maintenance & Support icon">
         <i class="fas fa-tools" style="color:#e91e63;"></i>
         <h3>Maintenance & Support</h3>
         <p>Regular servicing and on-call support to ensure your security systems run flawlessly.</p>
@@ -314,22 +320,22 @@
   <section id="digital-media" data-aos="fade-up">
     <h2> Our Digital Media Services</h2>
     <div class="digital-service-container">
-      <div class="digital-service-card">
+      <div class="digital-service-card" role="img" aria-label="Social Media Handle Management icon">
         <i class="fas fa-hashtag" style="color:#00d4ff;"></i>
         <h3>Social Media Handle Management</h3>
         <p>Manage and grow your social media presence across platforms with expert strategies.</p>
       </div>
-      <div class="digital-service-card">
+      <div class="digital-service-card" role="img" aria-label="Google Maps Location Update & Management icon">
         <i class="fas fa-map-marker-alt" style="color:#ff9800;"></i>
         <h3>Google Maps Location Update & Management</h3>
         <p>Keep your business location accurate and optimized on Google Maps to attract more customers.</p>
       </div>
-      <div class="digital-service-card">
+      <div class="digital-service-card" role="img" aria-label="Reels Shoot & Edit icon">
         <i class="fas fa-video" style="color:#4caf50;"></i>
         <h3>Reels Shoot & Edit</h3>
         <p>Professional shooting and editing of reels for social media engagement and branding.</p>
       </div>
-      <div class="digital-service-card">
+      <div class="digital-service-card" role="img" aria-label="Photography icon">
         <i class="fas fa-camera" style="color:#e91e63;"></i>
         <h3>Photography</h3>
         <p>High-quality photography services for events, products, and promotional needs.</p>
@@ -339,9 +345,9 @@
 
   <!-- About Section -->
   <section id="about" data-aos="fade-up">
-    <h2>About CCTV Guy</h2>
+    <h2>About Us</h2> 
     <p>
-      At CCTV Guy, we specialize in comprehensive IT and security services tailored to protect your home and business.
+      We specialize in comprehensive IT and security services tailored to protect your home and business. 
       Our expertise extends beyond CCTV installation to include advanced networking solutions and cutting-edge digital media services.
     </p>
     <p>
@@ -359,16 +365,21 @@
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p style="margin-top:20px; color:#00d4ff;">Or call us directly at <a href="tel:+919365024703" style="color:#00d4ff; text-decoration: underline;">9365024703</a></p>
+    <p style="margin-top:20px; color:#00d4ff;">
+      Or call us directly at 
+      <a href="tel:+919365024703" style="color:#00d4ff; text-decoration: underline;">9365024703</a>
+    </p>
   </section>
 
   <!-- Floating Call & WhatsApp Buttons -->
   <div class="floating-btn-container" aria-label="Contact options">
     <a href="tel:+919365024703" class="floating-btn" title="Call us">
-      <i class="fas fa-phone"></i>
+      <i class="fas fa-phone" aria-hidden="true"></i>
+      <span class="sr-only">Call us</span>
     </a>
     <a href="https://wa.me/919365024703" target="_blank" rel="noopener" class="floating-btn" title="WhatsApp chat">
-      <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      <span class="sr-only">WhatsApp chat</span>
     </a>
   </div>
 
@@ -385,5 +396,19 @@
       return false;
     }
   </script>
+
+  <!-- Accessibility helper style -->
+  <style>
+    .sr-only { 
+      position: absolute; 
+      width: 1px; 
+      height: 1px; 
+      padding: 0; 
+      margin: -1px; 
+      overflow: hidden; 
+      clip: rect(0, 0, 0, 0); 
+      border: 0; 
+    }
+  </style>
 </body>
 </html>
