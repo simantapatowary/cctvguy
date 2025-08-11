@@ -1,266 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCTVGuy Services</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #fff;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 10%;
-            background: rgba(0,0,0,0.8);
-        }
-        header img.logo {
-            height: 50px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 10%;
-            background: rgba(255,255,255,0.1);
-        }
-        .hero h1 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-        .hero button {
-            background: #3b82f6;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            cursor: pointer;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-        .services {
-            width: 80%;
-            margin: auto;
-            padding: 50px 0;
-        }
-        .category-box {
-            border: 2px solid rgba(255,255,255,0.2);
-            border-radius: 12px;
-            margin-bottom: 20px;
-            overflow: hidden;
-            background: rgba(255,255,255,0.05);
-            transition: transform 0.3s ease;
-        }
-        .category-box:hover {
-            transform: scale(1.02);
-        }
-        .category-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            cursor: pointer;
-            background: rgba(0,0,0,0.3);
-        }
-        .category-header h2 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-        .category-content {
-            display: none;
-            padding: 15px;
-        }
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .service-card {
-            position: relative;
-            padding: 20px;
-            background: rgba(255,255,255,0.08);
-            border-radius: 12px;
-            overflow: hidden;
-            cursor: pointer;
-            min-height: 200px;
-        }
-        .service-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        .service-card:hover::before {
-            opacity: 0.3;
-        }
-        .service-card .icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            z-index: 1;
-            position: relative;
-        }
-        .service-card h3, .service-card p {
-            position: relative;
-            z-index: 1;
-        }
-        /* About, Contact, Footer same styling */
-        .about, .contact {
-            width: 80%;
-            margin: auto;
-            padding: 50px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(0,0,0,0.8);
-        }
-        @media(max-width:768px) {
-            .hero {
-                padding: 50px 5%;
-            }
-            .services, .about, .contact {
-                width: 90%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCTV Guy | Security Solutions</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background: #0f2027;
+      scroll-behavior: smooth;
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 100px; /* for floating buttons space */
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(15, 32, 39, 0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 1000;
+    }
+    nav .logo { font-size: 1.4rem; font-weight: bold; color: #00d4ff; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: #00d4ff; }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 25px;
+      color: #dcdcdc;
+    }
+    .btn-primary {
+      background: #00d4ff;
+      color: #0f2027;
+      padding: 12px 25px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover { background: #00a7cc; }
+
+    /* Services Section */
+    #services {
+      padding: 80px 20px;
+      background: #16222a;
+      text-align: center;
+    }
+    #services h2 {
+      font-size: 2rem;
+      margin-bottom: 50px;
+      color: #00d4ff;
+    }
+    .service-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .service-card {
+      background: #1e2c35;
+      padding: 30px 20px;
+      border-radius: 10px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      background: #243b4a;
+    }
+    .service-card i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #00d4ff;
+    }
+    .service-card p {
+      font-size: 0.95rem;
+      color: #cccccc;
+    }
+
+    /* About Section */
+    #about {
+      padding: 80px 20px;
+      background: #0f2027;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    #about h2 {
+      font-size: 2rem;
+      color: #00d4ff;
+      margin-bottom: 30px;
+    }
+    #about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #dcdcdc;
+      margin-bottom: 20px;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 80px 20px;
+      background: #16222a;
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+      border-radius: 10px;
+    }
+    #contact h2 {
+      font-size: 2rem;
+      color: #00d4ff;
+      margin-bottom: 40px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    input, textarea {
+      padding: 12px 15px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #00d4ff;
+      background: #243b4a;
+      color: white;
+    }
+    button[type="submit"] {
+      background: #00d4ff;
+      color: #0f2027;
+      border: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button[type="submit"]:hover {
+      background: #00a7cc;
+    }
+
+    /* Floating Call & WhatsApp Buttons */
+    .floating-btn-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1500;
+    }
+    .floating-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #00d4ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #0f2027;
+      font-size: 22px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+    .floating-btn:hover {
+      background: #00a7cc;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      #about, #services, #contact {
+        padding: 50px 15px;
+      }
+      .service-container {
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-    <img src="images/logo.png" alt="CCTVGuy" class="logo">
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">CCTV Guy</div>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<!-- HERO -->
-<section id="hero" class="hero">
-    <h1>We Create, Manage & Market Your Brand</h1>
-    <p>Your all-in-one solution for branding, IT, and creative marketing services.</p>
-    <button>Get Started</button>
-</section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 data-aos="fade-up">Securing Your World with CCTV Guy</h1>
+    <p data-aos="fade-up" data-aos-delay="200">
+      Professional CCTV, Networking, and Security Solutions you can trust.  
+      We provide end-to-end service from installation to maintenance.
+    </p>
+    <button class="btn-primary" data-aos="fade-up" data-aos-delay="400">Get a Free Quote</button>
+  </section>
 
-<!-- SERVICES -->
-<section id="services" class="services">
-    <!-- IT Services -->
-    <div class="category-box">
-        <div class="category-header" onclick="toggleCategory(this)">
-            <h2>IT Services</h2>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="category-content">
-            <div class="service-grid">
-                <div class="service-card" style="--bg:url('images/webdev.jpg')">
-                    <div class="icon"><i class="fas fa-code"></i></div>
-                    <h3>Website Development</h3>
-                    <p>Modern, responsive websites tailored to your business.</p>
-                </div>
-                <div class="service-card" style="--bg:url('images/googlemap.jpg')">
-                    <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
-                    <h3>Google Maps Optimization</h3>
-                    <p>Get found easily by managing your Google business profile.</p>
-                </div>
-            </div>
-        </div>
+  <!-- Services Section -->
+  <section id="services">
+    <h2 data-aos="fade-up">Our Services</h2>
+    <div class="service-container">
+      <div class="service-card" data-aos="zoom-in">
+        <i class="fas fa-video" style="color:#00d4ff;"></i>
+        <h3>CCTV Installation</h3>
+        <p>High-quality CCTV camera setup for homes, offices, and industries with remote monitoring.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-network-wired" style="color:#ff9800;"></i>
+        <h3>Networking Solutions</h3>
+        <p>LAN, Wi-Fi, and structured cabling for seamless connectivity across your premises.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-door-closed" style="color:#4caf50;"></i>
+        <h3>Access Control</h3>
+        <p>Biometric attendance, EM locks, and secure entry systems to protect your property.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-tools" style="color:#e91e63;"></i>
+        <h3>Maintenance & Support</h3>
+        <p>Regular servicing and on-call support to ensure your security systems run flawlessly.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Creative & Marketing Services -->
-    <div class="category-box">
-        <div class="category-header" onclick="toggleCategory(this)">
-            <h2>Creative & Marketing Services</h2>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="category-content">
-            <div class="service-grid">
-                <div class="service-card" style="--bg:url('images/socialmedia.jpg')">
-                    <div class="icon"><i class="fab fa-instagram"></i></div>
-                    <h3>Social Media Management</h3>
-                    <p>Build and maintain your brand presence online.</p>
-                </div>
-                <div class="service-card" style="--bg:url('images/reels.jpg')">
-                    <div class="icon"><i class="fas fa-video"></i></div>
-                    <h3>Reels Shoot & Edit</h3>
-                    <p>Create short videos that grab attention.</p>
-                </div>
-                <div class="service-card" style="--bg:url('images/photography.jpg')">
-                    <div class="icon"><i class="fas fa-camera"></i></div>
-                    <h3>Photography</h3>
-                    <p>High-quality photos for your brand.</p>
-                </div>
-                <div class="service-card" style="--bg:url('images/branding.jpg')">
-                    <div class="icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3>Branding & Marketing</h3>
-                    <p>Effective strategies to reach your audience.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up">
+    <h2>About CCTV Guy</h2>
+    <p>
+      At CCTV Guy, we specialize in comprehensive IT and security services tailored to protect your home and business.
+      Our expertise extends beyond CCTV installation to include advanced networking solutions and cutting-edge digital media services.
+    </p>
+    <p>
+      Whether you need secure surveillance systems, reliable connectivity, or impactful digital marketing, we deliver professional solutions designed to meet your unique needs.
+      Trust us to keep your property safe and your business connected.
+    </p>
+  </section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-    <h2>About Us</h2>
-    <p>We blend design, technology, and strategy to help your brand stand out.</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required><br><br>
-        <input type="email" placeholder="Your Email" required><br><br>
-        <textarea placeholder="Your Message" rows="5"></textarea><br><br>
-        <button type="submit">Send Message</button>
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="#" method="POST" onsubmit="return handleSubmit(event)">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
-    <br>
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.3246741479786!2d91.7267841753082!3d26.09782069364456"
-        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
-</section>
+    <p style="margin-top:20px; color:#00d4ff;">Or call us directly at <a href="tel:+919365024703" style="color:#00d4ff; text-decoration: underline;">9365024703</a></p>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-    <p>&copy; 2025 CCTVGuy. All Rights Reserved.</p>
-</footer>
+  <!-- Floating Call & WhatsApp Buttons -->
+  <div class="floating-btn-container" aria-label="Contact options">
+    <a href="tel:+919365024703" class="floating-btn" title="Call us">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://wa.me/919365024703" target="_blank" rel="noopener" class="floating-btn" title="WhatsApp chat">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
 
-<script>
-function toggleCategory(header) {
-    const content = header.nextElementSibling;
-    const icon = header.querySelector("i");
-    if (content.style.display === "block") {
-        content.style.display = "none";
-        icon.classList.remove("fa-chevron-up");
-        icon.classList.add("fa-chevron-down");
-    } else {
-        content.style.display = "block";
-        icon.classList.remove("fa-chevron-down");
-        icon.classList.add("fa-chevron-up");
+  <!-- AOS Animation Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    // Simple form submission handler - just prevents default and shows alert
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert("Thank you for reaching out! We'll get back to you soon.");
+      event.target.reset();
+      return false;
     }
-}
-</script>
-
+  </script>
 </body>
 </html>
