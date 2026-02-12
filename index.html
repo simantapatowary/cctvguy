@@ -1,477 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Meta Tags -->
-  <title>CCTV Guy | IT & Digital Media Services in Guwahati</title>
-  <meta name="description" content="Professional CCTV installation, IT networking, and digital media services including social media management, Google Maps optimization, reels shoot & edit, and photography in Guwahati." />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.cctvguy.in/" />
-  <meta property="og:title" content="CCTV Guy | IT & Digital Media Services in Guwahati" />
-  <meta property="og:description" content="Professional CCTV installation, IT networking, and digital media services including social media management, Google Maps optimization, reels shoot & edit, and photography in Guwahati." />
-  <meta property="og:image" content="https://github.com/simantapatowary/cctvguy/blob/main/images/service-remote.jpg?raw=true" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://www.cctvguy.in/" />
-  <meta name="twitter:title" content="CCTV Guy | IT & Digital Media Services in Guwahati" />
-  <meta name="twitter:description" content="Professional CCTV installation, IT networking, and digital media services including social media management, Google Maps optimization, reels shoot & edit, and photography in Guwahati." />
-  <meta name="twitter:image" content="https://github.com/simantapatowary/cctvguy/blob/main/images/service-remote.jpg?raw=true" />
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      color: white;
-      background: #0f2027;
-      scroll-behavior: smooth;
-      min-height: 100vh;
-      position: relative;
-      padding-bottom: 100px; /* for floating buttons space */
-    }
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: rgba(15, 32, 39, 0.85);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      z-index: 1000;
-    }
-    nav .logo {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #00d4ff;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #00d4ff;
-    }
-
-    /* Hamburger menu button */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: #00d4ff;
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 25px;
-      color: #dcdcdc;
-    }
-    .btn-primary {
-      background: #00d4ff;
-      color: #0f2027;
-      padding: 12px 25px;
-      border: none;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-primary:hover {
-      background: #00a7cc;
-    }
-
-    /* Common Section Styles */
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-      text-align: center;
-      border-radius: 10px;
-    }
-    #services {
-      background: #16222a;
-    }
-    #digital-media {
-      background: #16222a;
-      margin-top: 40px;
-    }
-    #services h2,
-    #digital-media h2 {
-      font-size: 2rem;
-      margin-bottom: 50px;
-      color: #00d4ff;
-    }
-    .service-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .service-card {
-      background: #1e2c35;
-      padding: 30px 20px;
-      border-radius: 10px;
-      transition: transform 0.3s, background 0.3s;
-      cursor: default;
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-      background: #243b4a;
-    }
-    .service-card i {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-    .service-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #00d4ff;
-    }
-    .service-card p {
-      font-size: 0.95rem;
-      color: #cccccc;
-    }
-
-    /* About Section */
-    #about {
-      padding: 80px 20px;
-      background: #0f2027;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-    #about h2 {
-      font-size: 2rem;
-      color: #00d4ff;
-      margin-bottom: 30px;
-    }
-    #about p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #dcdcdc;
-      margin-bottom: 20px;
-    }
-
-    /* Contact Section */
-    #contact {
-      padding: 80px 20px;
-      background: #16222a;
-      max-width: 600px;
-      margin: auto;
-      text-align: center;
-      border-radius: 10px;
-    }
-    #contact h2 {
-      font-size: 2rem;
-      color: #00d4ff;
-      margin-bottom: 40px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    input, textarea {
-      padding: 12px 15px;
-      border-radius: 6px;
-      border: none;
-      font-size: 1rem;
-      resize: vertical;
-    }
-    input:focus, textarea:focus {
-      outline: 2px solid #00d4ff;
-      background: #243b4a;
-      color: white;
-    }
-    button[type="submit"] {
-      background: #00d4ff;
-      color: #0f2027;
-      border: none;
-      padding: 12px 25px;
-      font-weight: bold;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button[type="submit"]:hover {
-      background: #00a7cc;
-    }
-
-    /* Floating Call & WhatsApp Buttons */
-    .floating-btn-container {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      z-index: 1500;
-    }
-    .floating-btn {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background: #00d4ff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #0f2027;
-      font-size: 22px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: background 0.3s;
-      text-decoration: none;
-    }
-    .floating-btn:hover {
-      background: #00a7cc;
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: rgba(15, 32, 39, 0.95);
-        position: absolute;
-        top: 60px;
-        right: 30px;
-        padding: 15px;
-        border-radius: 8px;
-        width: 200px;
-      }
-      nav ul.show {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      #about, #services, #contact, #digital-media {
-        padding: 50px 15px;
-      }
-      .service-container {
-        gap: 20px;
-      }
-    }
-
-    /* Accessibility helper style */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-  </style>
-
-  <!-- Structured Data for Local Business -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "CCTV Guy",
-    "telephone": "+919365024703",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Lokhra",
-      "addressLocality": "Guwahati",
-      "postalCode": "781040",
-      "addressCountry": "IN"
-    },
-    "url": "https://www.cctvguy.in"
-  }
-  </script>
+    <meta charset="UTF-8">
+    <title>CCTV Installation in Guwahati | CCTVGuy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional CCTV installation and security solutions in Guwahati. Reliable setup, clean wiring, and mobile remote access.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">CCTV Guy</div>
 
-    <!-- Hamburger toggle button -->
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#digital-media">Digital Media</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1 data-aos="fade-up">Securing Your World with Advanced IT Solution</h1>
-    <p data-aos="fade-up" data-aos-delay="200">
-      Professional CCTV, Networking, and Security Solutions you can trust.
-      We provide end-to-end service from installation to maintenance.
-    </p>
-    <a href="https://wa.me/919365024703?text=Hello,%20I%20would%20like%20to%20know%20the%20rates%20for%20your%20services." class="btn-primary" data-aos="fade-up" data-aos-delay="400" target="_blank" rel="noopener noreferrer">Get a Free Quote</a>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
-    <h2 data-aos="fade-up">Our IT Services</h2>
-    <div class="service-container">
-      <div class="service-card" data-aos="zoom-in" role="img" aria-label="CCTV Installation icon">
-        <i class="fas fa-video" style="color:#00d4ff;"></i>
-        <h3>CCTV Installation</h3>
-        <p>High-quality CCTV camera setup for homes, offices, and industries with remote monitoring.</p>
-      </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="100" role="img" aria-label="Networking Solutions icon">
-        <i class="fas fa-network-wired" style="color:#ff9800;"></i>
-        <h3>Networking Solutions</h3>
-        <p>LAN, Wi-Fi, and structured cabling for seamless connectivity across your premises.</p>
-      </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="200" role="img" aria-label="Access Control icon">
-        <i class="fas fa-door-closed" style="color:#4caf50;"></i>
-        <h3>Access Control</h3>
-        <p>Biometric attendance, EM locks, and secure entry systems to protect your property.</p>
-      </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="300" role="img" aria-label="Maintenance & Support icon">
-        <i class="fas fa-tools" style="color:#e91e63;"></i>
-        <h3>Maintenance & Support</h3>
-        <p>Regular servicing and on-call support to ensure your security systems run flawlessly.</p>
-      </div>
+<header>
+    <div class="container">
+        <h1>CCTV Installation & Security Solutions in Guwahati</h1>
+        <p>Professional Setup • Clean Wiring • Mobile Remote Access</p>
+        <div class="buttons">
+            <a href="tel:9365024703" class="btn primary">Call Now</a>
+            <a href="https://wa.me/919365024703" class="btn secondary">WhatsApp</a>
+        </div>
     </div>
-  </section>
+</header>
 
-  <!-- Digital Media Services Section -->
-  <section id="digital-media" data-aos="fade-up">
-    <h2>Our Digital Media Services</h2>
-    <div class="service-container">
-      <div class="service-card" role="img" aria-label="Social Media Handle Management icon" data-aos="zoom-in">
-        <i class="fas fa-hashtag" style="color:#00d4ff;"></i>
-        <h3>Social Media Handle Management</h3>
-        <p>Manage and grow your social media presence across platforms with expert strategies.</p>
-      </div>
-      <div class="service-card" role="img" aria-label="Google Maps Location Update & Management icon" data-aos="zoom-in" data-aos-delay="100">
-        <i class="fas fa-map-marker-alt" style="color:#ff9800;"></i>
-        <h3>Google Maps Location Update & Management</h3>
-        <p>Keep your business location accurate and optimized on Google Maps to attract more customers.</p>
-      </div>
-      <div class="service-card" role="img" aria-label="Reels Shoot & Edit icon" data-aos="zoom-in" data-aos-delay="200">
-        <i class="fas fa-video" style="color:#4caf50;"></i>
-        <h3>Reels Shoot & Edit</h3>
-        <p>Professional shooting and editing of reels for social media engagement and branding.</p>
-      </div>
-      <div class="service-card" role="img" aria-label="Photography icon" data-aos="zoom-in" data-aos-delay="300">
-        <i class="fas fa-camera" style="color:#e91e63;"></i>
-        <h3>Photography</h3>
-        <p>High-quality photography services for events, products, and promotional needs.</p>
-      </div>
+<section class="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>CCTV Installation</h3>
+                <p>Home & commercial camera setup with clean professional wiring.</p>
+            </div>
+            <div class="card">
+                <h3>DVR / NVR Setup</h3>
+                <p>Secure recording systems with remote viewing configuration.</p>
+            </div>
+            <div class="card">
+                <h3>IP Camera Solutions</h3>
+                <p>High-resolution surveillance with internet-based access.</p>
+            </div>
+            <div class="card">
+                <h3>Maintenance & AMC</h3>
+                <p>Regular servicing and troubleshooting support.</p>
+            </div>
+            <div class="card">
+                <h3>Networking & Cabling</h3>
+                <p>Structured LAN and security cable management.</p>
+            </div>
+            <div class="card">
+                <h3>Biometric Systems</h3>
+                <p>Attendance system installation for offices & businesses.</p>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- About Section -->
-  <section id="about" data-aos="fade-up">
-    <h2>About Us</h2>
-    <p>
-      We specialize in comprehensive IT and security services tailored to protect your home and business.
-      Our expertise extends beyond CCTV installation to include advanced networking solutions and cutting-edge digital media services.
-    </p>
-    <p>
-      Whether you need secure surveillance systems, reliable connectivity, or impactful digital marketing, we deliver professional solutions designed to meet your unique needs.
-      Trust us to keep your property safe and your business connected.
-    </p>
-  </section>
+<section class="why">
+    <div class="container">
+        <h2>Why Choose CCTVGuy?</h2>
+        <ul>
+            <li>✔ Local & Fast Response</li>
+            <li>✔ Affordable Pricing</li>
+            <li>✔ Clean Professional Work</li>
+            <li>✔ Mobile Live View Setup</li>
+            <li>✔ After Installation Support</li>
+        </ul>
+    </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <form id="contact-form" action="#" method="POST" onsubmit="return handleSubmit(event)">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p style="margin-top:20px; color:#00d4ff;">
-      Or call us directly at
-      <a href="tel:+919365024703" style="color:#00d4ff; text-decoration: underline;">9365024703</a>
-    </p>
-  </section>
+<section class="projects">
+    <div class="container">
+        <h2>Recent Work</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Retail Shop – Lokhra</h3>
+                <p>Installed 6 HD cameras + DVR with mobile viewing enabled.</p>
+            </div>
+            <div class="card">
+                <h3>Residential Home – Guwahati</h3>
+                <p>4-camera system with night vision & remote monitoring.</p>
+            </div>
+            <div class="card">
+                <h3>Office Setup</h3>
+                <p>NVR + 8 IP cameras with secure remote access.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <!-- Floating Call & WhatsApp Buttons -->
-  <div class="floating-btn-container" aria-label="Contact options">
-    <a href="tel:+919365024703" class="floating-btn" title="Call us">
-      <i class="fas fa-phone" aria-hidden="true"></i>
-      <span class="sr-only">Call us</span>
-    </a>
-    <a href="https://wa.me/919365024703" target="_blank" rel="noopener" class="floating-btn" title="WhatsApp chat">
-      <i class="fab fa-whatsapp" aria-hidden="true"></i>
-      <span class="sr-only">WhatsApp chat</span>
-    </a>
-  </div>
+<section class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Simanta Patowary</p>
+        <p>📍 Guwahati, Assam</p>
+        <p>📞 <a href="tel:9365024703">9365024703</a></p>
+        <a href="https://wa.me/919365024703" class="btn primary">Get Free Consultation</a>
+    </div>
+</section>
 
-  <!-- AOS Animation Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000 });
+<footer>
+    <p>© 2026 CCTVGuy | All Rights Reserved</p>
+</footer>
 
-    // Simple form submission handler - just prevents default and shows alert
-    function handleSubmit(event) {
-      event.preventDefault();
-      alert("Thank you for reaching out! We'll get back to you soon.");
-      event.target.reset();
-      return false;
-    }
-
-    // Mobile menu toggle script
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('nav ul');
-
-    toggleButton.addEventListener('click', () => {
-      const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
-      toggleButton.setAttribute('aria-expanded', !isExpanded);
-      navMenu.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>
