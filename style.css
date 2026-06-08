@@ -31,8 +31,11 @@ body {
     align-items: center;
 }
 
-.logo {
-    color: white;
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
 }
 
 .nav-links {
