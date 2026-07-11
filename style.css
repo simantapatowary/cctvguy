@@ -396,6 +396,47 @@ body::after{
 
 }
 
+/*=========================
+ HERO STATS
+=========================*/
+
+.hero-stats{
+
+    display:flex;
+    gap:50px;
+    margin-top:60px;
+    flex-wrap:wrap;
+
+}
+
+.stat{
+
+    position:relative;
+
+}
+
+.stat h3{
+
+    font-size:42px;
+    font-weight:700;
+    color:#33b5ff;
+    margin-bottom:8px;
+
+}
+
+.stat h3::after{
+
+    content:"+";
+
+}
+
+.stat p{
+
+    color:#9ca3af;
+    font-size:15px;
+
+}
+   
 .hero-image img{
 
     width:300px;
